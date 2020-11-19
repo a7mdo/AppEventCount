@@ -10,7 +10,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    //var window: UIWindow? // was not here in the 1st place, I added it manually but still didn't work
+    var window: UIWindow? // was not here in the 1st place, I added it manually but still didn't work
     var viewController: ViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        //viewController = window?.rootViewController as? ViewController // Won't compile since window not declared in the scope
+        viewController = window?.rootViewController as? ViewController // Won't compile since window not declared in the scope
         
         viewController?.didFinishLaunchingCount += 1
     }
